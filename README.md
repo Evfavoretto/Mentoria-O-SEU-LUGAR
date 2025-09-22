@@ -93,9 +93,35 @@
   </div>
 </section>
 
+<!-- OFERTA / INVESTIMENTO -->
+<section>
+  <div class="container">
+    <h3 class="title">Investimento & Estrutura</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch">
+      <div style="background:#fff;border:1px solid #e7e7e7;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.12);padding:22px">
+        <p style="margin:0 0 8px;color:#555">Turma ao vivo • <strong>12 semanas</strong></p>
+        <p style="margin:0 0 8px">Segundas-feiras, <strong>19h–22h</strong> (horário de Brasília)</p>
+        <div style="margin:14px 0">
+          <span style="display:inline-block;background:#0c4d1f;color:#fff;padding:4px 10px;border-radius:999px;font-weight:700;font-size:12px">INVESTIMENTO</span>
+          <p style="font-size:40px;margin:8px 0 0;color:#0c4d1f"><span style="text-decoration:line-through;color:#888">R$ 3.500,00</span> <strong>por R$ 1.970,00</strong></p>
+        </div>
+        <a class="btn btn-primary" href="#aplicacao">Quero me candidatar</a>
+      </div>
+      <div style="background:#fff;border:1px solid #e7e7e7;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.12);padding:22px">
+        <h4 style="margin:0 0 10px;color:#0c4d1f">Bônus</h4>
+        <ul style="margin:0;padding-left:18px;line-height:1.7">
+          <li><strong>4 encontros individuais online</strong> para acelerar a sua integração</li>
+          <li>Materiais e tarefas de integração entre encontros</li>
+          <li>Suporte no grupo durante o período da mentoria</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="aplicacao">
   <div class="container">
-    <h3 class="title" style="color:#fff">Formulário de Aplicação — Mentoria O SEU LUGAR</h3>
+    <h3 class="title" style="color:#yellow">Formulário de Aplicação — Mentoria O SEU LUGAR</h3>
     <div class="form-wrap">
       <form class="app" action="#" method="POST">
         <div class="field"><label for="nome">Nome completo</label><input id="nome" name="nome" type="text" required></div>
@@ -129,7 +155,7 @@
     </div>
     <div class="faq-item">
       <h4>Posso parcelar o valor?</h4>
-      <p>Sim. Existem opções de parcelamento e condições especiais de pagamento.</p>
+      <p>Sim. Existem opções de parcelamento no cartão em até 12 X* e condições especiais de pagamento á vista.</p>
     </div>
     <div class="faq-item">
       <h4>Os encontros são online ou presenciais?</h4>
@@ -139,6 +165,15 @@
       <h4>Existe suporte fora dos encontros?</h4>
       <p>Sim. Você terá acesso a grupo exclusivo e suporte direto durante o período da mentoria.</p>
     </div>
+  </div>
+</section>
+
+<!-- CONTAGEM REGRESSIVA -->
+<section class="green-section">
+  <div class="container" style="text-align:center">
+    <h3 class="title">Garanta sua vaga agora</h3>
+    <p>O formulário ficará disponível por tempo limitado. Complete sua aplicação em até:</p>
+    <div id="countdown" style="font-size:32px;font-weight:700;margin-top:12px"></div>
   </div>
 </section>
 
