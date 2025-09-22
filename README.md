@@ -94,7 +94,7 @@
   <div class="container">
     <h3 class="title" style="color:#fff">Formulário de Aplicação — Mentoria O SEU LUGAR</h3>
     <div class="form-wrap">
-      <form class="app" action="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/formResponse" method="POST" target="_blank" onsubmit="window.location.href='obrigado.html'; return false;">
+      <form class="app" action="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
         <div class="field"><label for="nome">Nome completo</label><input id="nome" name="entry.1179648702" type="text" required></div>
         <div class="field"><label for="email">E-mail</label><input id="email" name="entry.1143030303" type="email" required></div>
         <div class="field"><label for="whats">WhatsApp (DDD + número)</label><input id="whats" name="entry.2915256" type="tel" required></div>
@@ -107,6 +107,7 @@
         <div class="field"><label for="invest">Está ciente do investimento?</label><select id="invest" name="entry.159333129"><option>Sim, estou ciente do valor</option><option>Tenho dúvidas sobre formas de pagamento</option></select></div>
         <div class="field full consent"><input id="lgpd" type="checkbox" required><label for="lgpd">Autorizo o uso dos meus dados para análise da aplicação e contato (LGPD).</label></div>
         <div class="field full"><button class="btn btn-primary" type="submit">Enviar minha aplicação</button></div>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
       </form>
     </div>
   </div>
@@ -115,3 +116,44 @@
 <section class="footer">
   © 2025 Mentoria O SEU LUGAR • Dúvidas? WhatsApp: <a href="https://wa.me/5549998110445" target="_blank">(49) 99811-0445</a>
 </section>
+
+<script>
+  // Redireciona para a página de obrigado após o Google Forms receber
+  var submitted = false;
+  var iframe = document.getElementById('hidden_iframe');
+  if (iframe) {
+    iframe.addEventListener('load', function(){
+      if (submitted) { window.location.href = 'obrigado.html'; }
+    });
+  }
+</script>
+
+<!-- ===== SUGESTÃO DE ARQUIVO obrigado.html =====
+Salve o conteúdo abaixo em um novo arquivo chamado "obrigado.html" no mesmo diretório da landing. -->
+<!--
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Obrigado – Mentoria O SEU LUGAR</title>
+<style>
+  :root{--green-900:#0c4d1f;--green-800:#0a3c16;--yellow-300:#fff176}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;min-height:100vh;display:grid;place-items:center}
+  .card{max-width:680px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:28px;text-align:center;box-shadow:0 10px 28px rgba(0,0,0,.25)}
+  h1{margin:0 0 8px;font-size:36px}
+  p{opacity:.95;margin:8px 0}
+  a.btn{display:inline-block;margin-top:14px;background:var(--yellow-300);color:#111;padding:12px 20px;border-radius:999px;font-weight:700;text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Aplicação enviada!</h1>
+    <p>Recebi seus dados com sucesso. Em breve entrarei em contato pelo WhatsApp/e-mail.</p>
+    <p>Enquanto isso, você pode voltar à página e revisar as informações, ou falar comigo direto.</p>
+    <a class="btn" href="index.html">Voltar para a página</a>
+    <a class="btn" href="https://wa.me/5549998110445" target="_blank">Falar no WhatsApp</a>
+  </div>
+</body>
+</html>
+-->
