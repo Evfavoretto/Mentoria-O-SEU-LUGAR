@@ -1,6 +1,6 @@
 <!-- Landing Page – Mentoria O SEU LUGAR -->
 <style>
-  :root{--green-900:#0c4d1f;--green-800:#0a3c16;--gold-500:#c6a75d;--yellow-400:#FDE047;--stone-200:#e7e7e7;--white:#fff;--shadow:0 10px 28px rgba(0,0,0,.14);--radius:18px;--maxw:1120px}
+  :root{--green-900:#0c4d1f;--green-800:#0a3c16;--gold-500:#c6a75d;--yellow-400:#FDE047;--yellow-100:#FEF9C3;--stone-200:#e7e7e7;--white:#fff;--shadow:0 10px 28px rgba(0,0,0,.14);--radius:18px;--maxw:1120px}
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;line-height:1.5;background:var(--white)}
   .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
@@ -117,9 +117,9 @@
           <a class="btn btn-yellow" href="#aplicacao">Já tomei minha decisão e quero fazer parte</a>
         </div>
       </div>
-      <div style="background:#fff;border:1px solid #e7e7e7;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.12);padding:22px">
-        <h4 style="margin:0 0 10px;color:#0c4d1f">Bônus</h4>
-        <ul style="margin:0;padding-left:18px;line-height:1.7;color:#0b0b0b">
+      <div style="background:var(--yellow-100);border:1px solid #efe3a6;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.12);padding:22px">
+        <h4 style="margin:0 0 10px;color:#0c4d1f;background:rgba(253,224,71,.6);display:inline-block;padding:4px 10px;border-radius:10px">BÔNUS</h4>
+        <ul style="margin:0;padding-left:18px;line-height:1.7;color:#0b0b0b;font-weight:600">
           <li><strong>4 encontros individuais online</strong> para acelerar a sua integração</li>
           <li>Materiais e tarefas de integração entre encontros</li>
           <li>Suporte no grupo durante o período da mentoria</li>
@@ -177,6 +177,21 @@
   </div>
 </section>
 
-<section class="green-section">
-  <div class="container" style="text-align:center">
-    <h3 class="title">Garanta sua vaga agora mesmo
+<section class="footer">
+  Direitos Autorais • Mentoria O SEU LUGAR © 2025
+</section>
+
+<script>
+// FAQ acordeão: uma aberta por vez
+(function(){
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var q = item.querySelector('.faq-question');
+    if(!q) return;
+    q.addEventListener('click', function(){
+      items.forEach(function(other){ if(other!==item) other.classList.remove('active'); });
+      item.classList.toggle('active');
+    });
+  });
+})();
+</script>
