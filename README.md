@@ -1,4 +1,5 @@
-<!-- Página com depoimentos reais -->
+ MENTORIA O SEU LUGAR
+ <!-- Página com depoimentos reais -->
 <style>
   :root{--green-900:#0c4d1f;--green-800:#0a3c16;--gold-500:#c6a75d;--stone-200:#e7e7e7;--white:#fff;--shadow:0 10px 28px rgba(0,0,0,.14);--radius:18px;--maxw:1120px}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -38,10 +39,32 @@
 </style>
 
 <section class="hero">
-  <div class="brand"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAA..." alt="Logo Mentoria O SEU LUGAR"/></div>
   <h1>Mentoria O SEU LUGAR</h1>
   <p>Reconstrua sua vida com clareza e segurança. Libere padrões ocultos. Prospere com leveza.</p>
   <a class="btn btn-primary" href="#aplicacao">Quero Me Candidatar</a>
+</section>
+
+<!-- OBJETIVOS DA MENTORIA -->
+<section id="objetivos">
+  <div class="container">
+    <h3 class="title">Objetivos da Mentoria</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+      <ul style="list-style:disc;padding-left:22px;background:#fff;border:1px solid #e7e7e7;border-radius:14px;padding:16px;box-shadow:0 8px 22px rgba(0,0,0,.06)">
+        <li>Libertação de padrões familiares limitantes</li>
+        <li>Relacionamentos mais saudáveis e harmoniosos</li>
+        <li>Reconciliação com a história da sua família</li>
+        <li>Prosperidade e abundância financeira</li>
+        <li>Autoconfiança e empoderamento pessoal</li>
+      </ul>
+      <ul style="list-style:disc;padding-left:22px;background:#fff;border:1px solid #e7e7e7;border-radius:14px;padding:16px;box-shadow:0 8px 22px rgba(0,0,0,.06)">
+        <li>Equilíbrio emocional e mental</li>
+        <li>Alívio de estresse, ansiedade e sintomas psicossomáticos</li>
+        <li>Restauração do papel dos pais e filhos</li>
+        <li>Liberação de cargas emocionais do passado</li>
+        <li>Segurança e clareza para mudanças e decisões</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section id="depoimentos">
@@ -50,7 +73,7 @@
     <div class="depos">
       <article class="depo">
         <p>“Participar da mentoria foi muito importante para mim. Tive resultados e despertares em várias áreas da minha vida — financeira, psicológica e principalmente emocional. Como é bom não ter medo de sentir! Hoje me sinto leve, tranquila e confiante, mais perto do meu sonho de cursar medicina.”</p>
-        <small>Participante da Mentoria</small>
+        <small>Diego</small>
       </article>
       <article class="depo">
         <p>“Aprendi que o dinheiro não é apenas números, mas carrega emoções, histórias e vínculos. Quando olhado com equilíbrio, nos ensina sobre dar e receber e sobre honrar quem veio antes.”</p>
@@ -72,6 +95,17 @@
         <p>“Aprendi que somos capazes de ressignificar cada emoção, aprender a nos tornar mais resilientes e equilibrados.”</p>
         <small>Vania Alebrant</small>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM VAI CONDUZIR -->
+<section id="quem-conduz">
+  <div class="container">
+    <h3 class="title">Quem vai conduzir</h3>
+    <div style="background:#fff;border:1px solid #e7e7e7;border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.06);padding:18px">
+      <p><strong>Evandro Favoretto</strong> — graduado em <strong>Gestão Financeira</strong>; pós‑graduado em <strong>Neurociência</strong>, <strong>Psicologia</strong> e <strong>Saúde Mental</strong>; formação em <strong>Constelação Familiar e Empresarial</strong>; formação em <strong>Neurologia</strong>; <strong>Empresário, Consultor e Mentor de Vida</strong>; formação em <strong>Meditação e Respiração Terapêutica com Renascimento</strong>.</p>
+      <p>Integra ciência, emocional e visão sistêmica em processos práticos que geram clareza, ordem e prosperidade na vida pessoal, familiar e profissional.</p>
     </div>
   </div>
 </section>
