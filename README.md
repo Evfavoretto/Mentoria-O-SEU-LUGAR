@@ -1,66 +1,18 @@
-<!-- Página ajustada com FAQ visível, botões amarelos e seção criativa de investimento -->
+<!-- Página com FAQ accordion, ajustes em cores e títulos -->
 <style>
-  :root{--green-900:#0c4d1f;--green-800:#0a3c16;--gold-500:#c6a75d;--yellow-400:#ffe680;--stone-200:#e7e7e7;--white:#fff;--shadow:0 10px 28px rgba(0,0,0,.14);--radius:18px;--maxw:1120px}
+  :root{--green-900:#0c4d1f;--green-800:#0a3c16;--gold-500:#c6a75d;--yellow-400:#FDE047;--stone-200:#e7e7e7;--white:#fff;--shadow:0 10px 28px rgba(0,0,0,.14);--radius:18px;--maxw:1120px}
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;line-height:1.5;background:var(--white)}
   .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 
   .hero{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;text-align:center;padding:56px 20px 40px}
-  .hero h1{margin:14px 0 10px;font-size:40px}
+  .hero h1{margin:14px 0 10px;font-size:48px;letter-spacing:1px}
   .hero p{max-width:72ch;margin:0 auto 18px;color:#dff3e7}
   .btn{display:inline-block;border:0;border-radius:999px;padding:14px 26px;font-weight:700;cursor:pointer;text-decoration:none}
-  .btn-primary{background:var(--yellow-400);color:#181818;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+  .btn-yellow{background:var(--yellow-400);color:#1a1a1a;box-shadow:0 8px 22px rgba(253,224,71,.45)}
 
   section{padding:56px 0}
-  .title{text-align:center;font-size:30px;margin-bottom:24px}
-
-  .green-section{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff}
-  .green-section .title{color:#fff}
-  .green-box{background:rgba(255,255,255,0.08);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
-
-  .objectives{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-  .objective{padding:12px;font-size:16px}
-
-  .bio{max-width:860px;margin:0 auto;font-size:17px;line-height:1.6}
-
-  .depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-  .depo{background:rgba(255,255,255,0.08);border-radius:16px;padding:22px;position:relative}
-  .depo:before{content:'\201C';position:absolute;top:-12px;left:16px;font-size:52px;color:#cbb67a;opacity:.7}
-  .depo p{margin:10px 0 12px;font-size:16px;font-style:italic;color:#fff}
-  .depo small{display:block;color:#ffe;color:#ffe;text-align:right;font-weight:600}
-
-  #aplicacao{background:linear-gradient(180deg,#104c22,var(--green-900));color:#fff}
-  .form-wrap{background:#fff;color:#0b0b0b;border-radius:22px;box-shadow:var(--shadow);padding:28px}
-  form.app{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .field{display:flex;flex-direction:column;gap:6px}
-  .field label{font-weight:600;font-size:14px}
-  .field input,.field select,.field textarea{padding:12px 14px;border:1px solid #ccc;border-radius:12px;font-size:15px}
-  .field textarea{min-height:110px;resize:vertical}
-  .full{grid-column:1/-1}
-  .consent{display:flex;gap:10px;align-items:flex-start}
-  button.btn-primary{background:var(--yellow-400)!important}
-
-  .faq-item{background:#fff;border-radius:12px;box-shadow:var(--shadow);margin-bottom:14px;padding:18px}
-  .faq-item h4{margin-bottom:8px;color:var(--green-900)}
-  .faq-item p{color:#0b0b0b;display:block}
-
-  .footer{background:#06290f;color:#dfeee6;text-align:center;padding:26px 12px;font-size:14px}
-  .footer a{color:#dfeee6}
-  --yellow-400:#FDE68A;
-}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;line-height:1.5;background:var(--white)}
-  .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-
-  .hero{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;text-align:center;padding:56px 20px 40px}
-  .hero h1{margin:14px 0 10px;font-size:40px}
-  .hero p{max-width:72ch;margin:0 auto 18px;color:#dff3e7}
-  .btn{display:inline-block;border:0;border-radius:999px;padding:14px 26px;font-weight:700;cursor:pointer;text-decoration:none}
-  .btn-primary{background:var(--gold-500);color:#181818;box-shadow:0 8px 22px rgba(198,167,93,.35)}
-  .btn-yellow{background:var(--yellow-400);color:#1a1a1a;box-shadow:0 8px 22px rgba(253,230,138,.45)}
-
-  section{padding:56px 0}
-  .title{text-align:center;font-size:30px;margin-bottom:24px}
+  .title{text-align:center;font-size:34px;margin-bottom:24px}
 
   .green-section{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff}
   .green-section .title{color:#fff}
@@ -87,18 +39,22 @@
   .full{grid-column:1/-1}
   .consent{display:flex;gap:10px;align-items:flex-start}
 
-  .faq-item{background:#fff;border-radius:12px;box-shadow:var(--shadow);margin-bottom:14px;padding:18px}
-  .faq-item h4{margin-bottom:8px;color:var(--green-900)}
-  .faq-item, .faq-item *{color:#0b0b0b !important}
+  /* FAQ Accordion */
+  .faq-item{background:#fff;border-radius:12px;box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+  .faq-question{padding:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:#0c4d1f}
+  .faq-answer{padding:0 16px 16px;display:none;color:#0b0b0b}
+  .faq-item.active .faq-answer{display:block}
+  .faq-item svg{transition:transform .3s}
+  .faq-item.active svg{transform:rotate(90deg)}
 
   .footer{background:#06290f;color:#dfeee6;text-align:center;padding:26px 12px;font-size:14px}
   .footer a{color:#dfeee6}
 </style>
 
 <section class="hero">
-  <h1>Mentoria O SEU LUGAR</h1>
+  <h1>MENTORIA O SEU LUGAR</h1>
   <p>Reconstrua sua vida com clareza e segurança. Libere padrões ocultos. Prospere com leveza.</p>
-  <a class="btn btn-primary" href="#aplicacao">Quero fazer parte desse grupo</a>
+  <a class="btn btn-yellow" href="#aplicacao">Quero fazer parte desse grupo</a>
 </section>
 
 <section class="green-section">
@@ -121,7 +77,7 @@
 
 <section class="green-section">
   <div class="container">
-    <h3 class="title">Quem Conduz</h3>
+    <h3 class="title">Conheça o Seu Mentor</h3>
     <div class="green-box bio">
       <p><strong>Evandro Favoretto</strong> — Graduado em Gestão Financeira, pós‑graduado em Neurociência, Psicologia e Saúde Mental. Formação em Constelação Familiar e Empresarial, formação em Numerologia, empresário, consultor e mentor de vida. Também possui formação em Meditação e Respiração Terapêutica com renascimento.</p>
     </div>
@@ -142,31 +98,29 @@
   </div>
 </section>
 
-<!-- OFERTA / INVESTIMENTO CRIATIVA -->
-<section class="green-section">
+<!-- Investimento -->
+<section>
   <div class="container">
-    <h3 class="title">Investimento & Estrutura</h3>
+    <h3 class="title" style="font-size:38px">INVESTIMENTO & ESTRUTURA</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch">
       <div style="background:radial-gradient(1200px 400px at 10% -10%, #1a6a33, #0c4d1f);color:#fff;border-radius:16px;box-shadow:0 18px 38px rgba(0,0,0,.25);padding:24px;position:relative;overflow:hidden">
-        <div style="position:absolute;top:16px;right:-40px;background:rgba(253,230,138,.15);filter:blur(20px);width:200px;height:200px;border-radius:50%"></div>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
           <span style="display:inline-block;background:#063019;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.4px">TURMA AO VIVO</span>
           <span style="display:inline-block;background:#063019;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.4px">12 SEMANAS</span>
           <span style="display:inline-block;background:#063019;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.4px">SEGUNDAS 19H–22H</span>
         </div>
         <div style="margin-top:14px">
-          <div style="font-size:14px;opacity:.95">Investimento</div>
-          <div style="font-size:40px;font-weight:900;line-height:1.1;margin-top:2px"><span style="text-decoration:line-through;opacity:.65">R$ 3.500,00</span> <span style="display:inline-block;background:#FDE68A;color:#1a1a1a;padding:2px 8px;border-radius:10px;margin-left:6px">por R$ 1.970,00</span></div>
-          <div style="margin-top:6px;font-size:14px;opacity:.9">Você economiza <strong>R$ 1.530,00</strong></div>
+          <div style="font-size:16px;opacity:.95">Investimento</div>
+          <div style="font-size:44px;font-weight:900;line-height:1.1;margin-top:2px"><span style="text-decoration:line-through;opacity:.65">R$ 3.500,00</span> <span style="display:inline-block;background:var(--yellow-400);color:#1a1a1a;padding:2px 8px;border-radius:10px;margin-left:6px">por R$ 1.970,00</span></div>
+          <div style="margin-top:6px;font-size:15px;opacity:.9">Você economiza <strong>R$ 1.530,00</strong></div>
         </div>
         <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn btn-yellow" href="#aplicacao">Já tomei minha decisão e quero fazer parte</a>
-          <span style="align-self:center;font-size:13px;opacity:.85">Vagas limitadas mediante aplicação</span>
         </div>
       </div>
       <div style="background:#fff;border:1px solid #e7e7e7;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.12);padding:22px">
         <h4 style="margin:0 0 10px;color:#0c4d1f">Bônus</h4>
-        <ul style="margin:0;padding-left:18px;line-height:1.7">
+        <ul style="margin:0;padding-left:18px;line-height:1.7;color:#0b0b0b">
           <li><strong>4 encontros individuais online</strong> para acelerar a sua integração</li>
           <li>Materiais e tarefas de integração entre encontros</li>
           <li>Suporte no grupo durante o período da mentoria</li>
@@ -202,46 +156,28 @@
 <section class="green-section">
   <div class="container">
     <h3 class="title">Perguntas Frequentes</h3>
-    <div class="faq-item"><h4>Qual a duração da mentoria?</h4><p>A mentoria acontece em encontros semanais de 3 horas, ao longo de 12 semanas.</p></div>
-    <div class="faq-item"><h4>Preciso ter conhecimento prévio?</h4><p>Não. O processo foi desenvolvido para qualquer pessoa que deseje clareza, equilíbrio e prosperidade.</p></div>
-    <div class="faq-item"><h4>Posso parcelar o valor?</h4><p>Sim. Existem opções de parcelamento e condições especiais de pagamento.</p></div>
-    <div class="faq-item"><h4>Os encontros são online ou presenciais?</h4><p>Os encontros são ao vivo online, com possibilidade de eventos presenciais anunciados.</p></div>
-    <div class="faq-item"><h4>Existe suporte fora dos encontros?</h4><p>Sim. Você terá acesso a grupo exclusivo e suporte direto durante o período da mentoria.</p></div>
-  </div>
-</section>
-
-<!-- CONTAGEM REGRESSIVA / WHATSAPP -->
-<section class="green-section">
-  <div class="container" style="text-align:center">
-    <h3 class="title">Garanta sua vaga agora mesmo</h3>
-    <p>O formulário ficará disponível por tempo limitado. Complete sua aplicação em até:</p>
-    <div id="countdown" style="font-size:32px;font-weight:700;margin-top:12px"></div>
-    <div style="margin-top:16px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a class="btn btn-yellow" href="https://wa.me/5549998110445" target="_blank" rel="noopener">Garanta sua vaga agora mesmo (WhatsApp)</a>
-      <a class="btn btn-yellow" href="#aplicacao">Já decidi e quero fazer parte desse grupo</a>
+    <div class="faq-item">
+      <div class="faq-question">Qual a duração da mentoria?<svg width="16" height="16" fill="currentColor"><path d="M6 4l4 4-4 4"/></svg></div>
+      <div class="faq-answer"><p>A mentoria acontece em encontros semanais de 3 horas, ao longo de 3 meses, com possibilidade de extensão conforme necessidade.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Preciso ter conhecimento prévio?<svg width="16" height="16" fill="currentColor"><path d="M6 4l4 4-4 4"/></svg></div>
+      <div class="faq-answer"><p>Não. O processo foi desenvolvido para qualquer pessoa que deseje clareza, equilíbrio e prosperidade.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Posso parcelar o valor?<svg width="16" height="16" fill="currentColor"><path d="M6 4l4 4-4 4"/></svg></div>
+      <div class="faq-answer"><p>Sim. Existem opções de parcelamento e condições especiais de pagamento.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Os encontros são online ou presenciais?<svg width="16" height="16" fill="currentColor"><path d="M6 4l4 4-4 4"/></svg></div>
+      <div class="faq-answer"><p>Os encontros podem ocorrer online ao vivo ou presenciais em datas específicas anunciadas.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Existe suporte fora dos encontros?<svg width="16" height="16" fill="currentColor"><path d="M6 4l4 4-4 4"/></svg></div>
+      <div class="faq-answer"><p>Sim. Você terá acesso a grupo exclusivo e suporte direto durante o período da mentoria.</p></div>
     </div>
   </div>
 </section>
 
 <section class="footer">
-  © <span id="y"></span> Mentoria O SEU LUGAR • Dúvidas? WhatsApp: <a href="https://wa.me/5549998110445" target="_blank">(49) 99811‑0445</a>
-</section>
-<script>
-function startCountdown(duration) {
-  var timer = duration, minutes, seconds;
-  var display = document.getElementById('countdown');
-  setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    display.textContent = minutes + ":" + seconds;
-    if (--timer < 0) {display.textContent = "Tempo esgotado";}
-  }, 1000);
-}
-window.onload = function () {
-  var fifteenMinutes = 60 * 15;
-  startCountdown(fifteenMinutes);
-  document.getElementById('y').textContent=new Date().getFullYear();
-};
-</script>
+  © <span id="y"></span> Mentoria O SEU LUGAR •
