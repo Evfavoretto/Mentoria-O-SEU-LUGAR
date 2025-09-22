@@ -94,13 +94,25 @@
 <section id="aplicacao">
   <div class="container">
     <h3 class="title" style="color:#fff">Formulário de Aplicação — Mentoria O SEU LUGAR</h3>
-    <div class="form-wrap" style="padding:0;border-radius:18px;overflow:hidden">
-      <!-- Google Form embed -->
-      <div style="position:relative;padding-top:0;height:auto">
-        <iframe src="https://docs.google.com/forms/d/1mb_cQIEqf2mneyYHMwp_ijb98wwKdtghKM_ZJrDtNYk/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-      </div>
+    <div class="form-wrap">
+      <form class="app" action="#" method="POST">
+        <div class="field"><label for="nome">Nome completo</label><input id="nome" name="nome" type="text" required></div>
+        <div class="field"><label for="email">E‑mail</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="whats">WhatsApp (DDD + número)</label><input id="whats" name="whatsapp" type="tel" placeholder="(DDD) número" required></div>
+        <div class="field"><label for="cidade">Cidade/Estado</label><input id="cidade" name="cidade" type="text"></div>
+        <div class="field full"><label for="objetivo">Qual seu objetivo principal com a mentoria?</label><textarea id="objetivo" name="objetivo" required></textarea></div>
+        <div class="field full"><label for="desafios">Quais desafios emocionais/sistêmicos você sente hoje?</label><textarea id="desafios" name="desafios" required></textarea></div>
+        <div class="field"><label for="area">Área que mais deseja transformar</label><select id="area" name="area"><option>Relacionamentos</option><option>Emocional/saúde</option><option>Carreira/negócios</option><option>Finanças/prosperidade</option><option>Família/papéis sistêmicos</option></select></div>
+        <div class="field"><label for="dispon">Disponibilidade (segundas 19h–22h)</label><select id="dispon" name="disponibilidade"><option>Tenho disponibilidade</option><option>Consigo ajustar</option><option>Não consigo nesse horário</option></select></div>
+        <div class="field"><label for="origem">Como soube da mentoria?</label><select id="origem" name="como_soube"><option>Instagram</option><option>WhatsApp/Indicação</option><option>YouTube</option><option>Evento/Aula</option><option>Outro</option></select></div>
+        <div class="field"><label for="invest">Está ciente do investimento?</label><select id="invest" name="investimento"><option>Sim, estou ciente do valor</option><option>Tenho dúvidas sobre formas de pagamento</option></select></div>
+        <div class="field full consent"><input id="lgpd" type="checkbox" required><label for="lgpd">Autorizo o uso dos meus dados para análise da aplicação e contato (LGPD).</label></div>
+        <div class="field full" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <button class="btn btn-yellow" type="submit">Enviar minha aplicação</button>
+          <a class="btn btn-yellow" href="https://docs.google.com/forms/d/1mb_cQIEqf2mneyYHMwp_ijb98wwKdtghKM_ZJrDtNYk/viewform" target="_blank" rel="noopener">Abrir formulário em nova aba</a>
+        </div>
+      </form>
     </div>
-    <p style="text-align:center;margin-top:12px"><a class="btn btn-yellow" href="https://docs.google.com/forms/d/1mb_cQIEqf2mneyYHMwp_ijb98wwKdtghKM_ZJrDtNYk/viewform" target="_blank" rel="noopener">Abrir o formulário em nova aba</a></p>
   </div>
 </section>
 
