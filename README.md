@@ -228,7 +228,7 @@
           </div>
           <div>
             <label for="whats">WhatsApp (DDD + número)</label>
-            <input id="whats" name="whatsapp" type="tel" placeholder="(00) 90000-0000" required>
+            <input id="whats" name="whatsapp" type="tel" placeholder="(49) 99811-0445" required>
           </div>
           <div>
             <label for="cidade">Cidade/Estado</label>
