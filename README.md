@@ -145,4 +145,25 @@
 <section class="footer">
   © <span id="y"></span> Mentoria O SEU LUGAR • Dúvidas? WhatsApp: <a href="https://wa.me/5549998110445" target="_blank">(49) 99811‑0445</a>
 </section>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script>document.getElementById('y').textContent=new Date().getFullYear()function startCountdown(duration) {
+  var timer = duration, minutes, seconds;
+  var display = document.getElementById('countdown');
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      display.textContent = "Tempo esgotado";
+    }
+  }, 1000);
+}
+window.onload = function () {
+  var fifteenMinutes = 60 * 15;
+  startCountdown(fifteenMinutes);
+};
+</script>
