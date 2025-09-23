@@ -96,7 +96,7 @@
   <div class="container">
     <h3 class="title" style="color:#fff">Formulário de Aplicação — Mentoria O SEU LUGAR</h3>
     <div class="form-wrap">
-      <form class="app" action="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/formResponse" method="POST" target="hidden_iframe" onsubmit="return handleSubmit();">
+      <form class="app" action="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
         <div class="field"><label for="nome">Nome completo</label><input id="nome" name="entry.1179648702" type="text" required></div>
         <div class="field"><label for="email">E-mail</label><input id="email" name="entry.1143030303" type="email" required></div>
         <div class="field"><label for="whats">WhatsApp (DDD + número)</label><input id="whats" name="entry.2915256" type="tel" required></div>
@@ -120,47 +120,8 @@
 </section>
 
 <script>
+  // Envio silencioso para o Google Forms + redirecionamento para Obrigado
   var submitted = false;
-  var iframe = document.getElementById('hidden_iframe');
-  if (iframe) {
-    iframe.addEventListener('load', function(){
-      if (submitted) { window.location.href = 'obrigado.html'; }
-    });
-  }
-  var submitted = false;
-  var lastPayload = '';
-  function handleSubmit(){
-    submitted = true;
-    var f = document.querySelector('#aplicacao form.app');
-    if(f){
-      var nome = f.querySelector('#nome')?.value || '';
-      var email = f.querySelector('#email')?.value || '';
-      var whats = f.querySelector('#whats')?.value || '';
-      var cidade = f.querySelector('#cidade')?.value || '';
-      var objetivo = f.querySelector('#objetivo')?.value || '';
-      var desafios = f.querySelector('#desafios')?.value || '';
-      var area = f.querySelector('#area')?.value || '';
-      var dispon = f.querySelector('#dispon')?.value || '';
-      var origem = f.querySelector('#origem')?.value || '';
-      var invest = f.querySelector('#invest')?.value || '';
-      var msg = `Olá, Evandro! Quero aplicar para a Mentoria O SEU LUGAR.%0A%0A`+
-                `Nome: ${nome}%0A`+
-                `E-mail: ${email}%0A`+
-                `WhatsApp: ${whats}%0A`+
-                `Cidade/Estado: ${cidade}%0A`+
-                `Objetivo: ${objetivo}%0A`+
-                `Desafios: ${desafios}%0A`+
-                `Área: ${area}%0A`+
-                `Disponibilidade: ${dispon}%0A`+
-                `Como soube: ${origem}%0A`+
-                `Investimento: ${invest}`;
-      lastPayload = msg;
-      // Abre o WhatsApp em nova aba com a mensagem pronta
-      var wa = 'https://wa.me/5549998110445?text=' + msg;
-      window.open(wa, '_blank');
-    }
-    return true; // continua o submit para o Google Forms (iframe)
-  }
   var iframe = document.getElementById('hidden_iframe');
   if (iframe) {
     iframe.addEventListener('load', function(){
