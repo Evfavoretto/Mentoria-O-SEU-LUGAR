@@ -106,6 +106,6 @@
 </section>
 
 <section class="footer">
-  © 2025 Mentoria O SEU LUGAR • Todos os direitos reservados • Dúvidas? WhatsApp: <a href="https://wa.me/5549998110445" target="_blank">(49) 99811-0445</a>
+  © 2025 Mentoria O SEU LUGAR • Todos os direitos reservados • 
 </section>
 
