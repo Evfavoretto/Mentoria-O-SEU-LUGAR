@@ -177,6 +177,3 @@
     });
   }
 </script>
-
-  ©️ 2025 Mentoria O SEU LUGAR • Dúvidas? WhatsApp: <a href="https://wa.me/5549998110445" target="_blank">(49) 99811-0445</a>
-</section>
