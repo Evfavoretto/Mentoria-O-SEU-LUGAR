@@ -1,4 +1,4 @@
-<!-- Página ajustada com redirecionamento -->
+<!-- Página ajustada com destaques nos objetivos e depoimentos -->
 <style>
   :root{--green-900:#0c4d1f;--green-800:#0a3c16;--gold-500:#c6a75d;--yellow-300:#fff176;--stone-200:#e7e7e7;--white:#fff;--shadow:0 10px 28px rgba(0,0,0,.14);--radius:18px;--maxw:1120px}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -13,20 +13,22 @@
   .btn-primary:hover{filter:brightness(1.05)}
 
   section{padding:56px 0}
-  .title{text-align:center;font-size:30px;margin-bottom:24px}
+  .title{text-align:center;font-size:34px;margin-bottom:28px;font-weight:800}
 
   .objectives{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-  .objective{background:var(--white);border:1px solid var(--stone-200);border-radius:16px;box-shadow:var(--shadow);padding:18px;text-align:center}
-  .objective h4{margin-bottom:8px;color:var(--green-900)}
+  .objective{border-radius:16px;box-shadow:var(--shadow);padding:18px;text-align:center;font-size:18px;font-weight:600}
+  .objective.white{background:var(--white);border:1px solid var(--stone-200);color:var(--green-900)}
+  .objective.green{background:var(--green-900);color:#fff}
+  .objective h4{margin-bottom:8px}
 
   .bio{background:var(--green-900);color:#fff;border-radius:16px;box-shadow:var(--shadow);padding:26px;max-width:860px;margin:0 auto}
-  .bio h3{margin-bottom:12px;font-size:26px;color:#fff}
+  .bio h3{margin-bottom:12px;font-size:28px;color:#fff}
   .bio p{margin-bottom:8px}
 
   .depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-  .depo{background:var(--white);border:1px solid var(--stone-200);border-radius:16px;box-shadow:var(--shadow);padding:22px;position:relative}
+  .depo{background:var(--white);border:1px solid var(--stone-200);border-radius:16px;box-shadow:var(--shadow);padding:28px;position:relative;font-size:18px}
   .depo:before{content:'\201C';position:absolute;top:-12px;left:16px;font-size:52px;color:#cbb67a;opacity:.5}
-  .depo p{margin:10px 0 12px;font-size:16px;font-style:italic}
+  .depo p{margin:10px 0 12px;font-style:italic}
   .depo small{display:block;color:#444;font-weight:600;text-align:right}
 
   #aplicacao{background:linear-gradient(180deg,#104c22,var(--green-900));color:#fff}
@@ -53,16 +55,16 @@
   <div class="container">
     <h3 class="title">Objetivos da Mentoria</h3>
     <div class="objectives">
-      <div class="objective"><h4>Libertação</h4><p>Libertação de padrões familiares limitados.</p></div>
-      <div class="objective"><h4>Relacionamentos</h4><p>Relacionamentos mais saudáveis e harmoniosos.</p></div>
-      <div class="objective"><h4>Reconciliação</h4><p>Reconciliação com a história da sua família.</p></div>
-      <div class="objective"><h4>Prosperidade</h4><p>Prosperidade e abundância financeira.</p></div>
-      <div class="objective"><h4>Autoconfiança</h4><p>Autoconfiança e empoderamento pessoal.</p></div>
-      <div class="objective"><h4>Equilíbrio</h4><p>Equilíbrio emocional e mental.</p></div>
-      <div class="objective"><h4>Alívio</h4><p>Alívio de estresse, ansiedade e sintomas psicossomáticos.</p></div>
-      <div class="objective"><h4>Família</h4><p>Restauração do papel dos pais e filhos.</p></div>
-      <div class="objective"><h4>Liberação</h4><p>Liberação de cargas emocionais do passado.</p></div>
-      <div class="objective"><h4>Segurança</h4><p>Segurança e clareza para mudanças e decisões.</p></div>
+      <div class="objective green"><h4>Libertação</h4><p>Libertação de padrões familiares limitados.</p></div>
+      <div class="objective green"><h4>Relacionamentos</h4><p>Relacionamentos mais saudáveis e harmoniosos.</p></div>
+      <div class="objective green"><h4>Reconciliação</h4><p>Reconciliação com a história da sua família.</p></div>
+      <div class="objective white"><h4>Prosperidade</h4><p>Prosperidade e abundância financeira.</p></div>
+      <div class="objective white"><h4>Autoconfiança</h4><p>Autoconfiança e empoderamento pessoal.</p></div>
+      <div class="objective white"><h4>Equilíbrio</h4><p>Equilíbrio emocional e mental.</p></div>
+      <div class="objective green"><h4>Alívio</h4><p>Alívio de estresse, ansiedade e sintomas psicossomáticos.</p></div>
+      <div class="objective green"><h4>Família</h4><p>Restauração do papel dos pais e filhos.</p></div>
+      <div class="objective green"><h4>Liberação</h4><p>Liberação de cargas emocionais do passado.</p></div>
+      <div class="objective white"><h4>Segurança</h4><p>Segurança e clareza para mudanças e decisões.</p></div>
     </div>
   </div>
 </section>
@@ -107,7 +109,7 @@
         <div class="field"><label for="invest">Está ciente do investimento?</label><select id="invest" name="entry.159333129"><option>Sim, estou ciente do valor</option><option>Tenho dúvidas sobre formas de pagamento</option></select></div>
         <div class="field full consent"><input id="lgpd" type="checkbox" required><label for="lgpd">Autorizo o uso dos meus dados para análise da aplicação e contato (LGPD).</label></div>
         <div class="field full"><button class="btn btn-primary" type="submit">Enviar minha aplicação</button></div>
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
       </form>
     </div>
   </div>
@@ -118,7 +120,6 @@
 </section>
 
 <script>
-  // Redireciona para a página de obrigado após o Google Forms receber
   var submitted = false;
   var iframe = document.getElementById('hidden_iframe');
   if (iframe) {
@@ -127,33 +128,3 @@
     });
   }
 </script>
-
-<!-- ===== SUGESTÃO DE ARQUIVO obrigado.html =====
-Salve o conteúdo abaixo em um novo arquivo chamado "obrigado.html" no mesmo diretório da landing. -->
-<!--
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Obrigado – Mentoria O SEU LUGAR</title>
-<style>
-  :root{--green-900:#0c4d1f;--green-800:#0a3c16;--yellow-300:#fff176}
-  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;min-height:100vh;display:grid;place-items:center}
-  .card{max-width:680px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:28px;text-align:center;box-shadow:0 10px 28px rgba(0,0,0,.25)}
-  h1{margin:0 0 8px;font-size:36px}
-  p{opacity:.95;margin:8px 0}
-  a.btn{display:inline-block;margin-top:14px;background:var(--yellow-300);color:#111;padding:12px 20px;border-radius:999px;font-weight:700;text-decoration:none}
-</style>
-</head>
-<body>
-  <div class="card">
-    <h1>Aplicação enviada!</h1>
-    <p>Recebi seus dados com sucesso. Em breve entrarei em contato pelo WhatsApp/e-mail.</p>
-    <p>Enquanto isso, você pode voltar à página e revisar as informações, ou falar comigo direto.</p>
-    <a class="btn" href="index.html">Voltar para a página</a>
-    <a class="btn" href="https://wa.me/5549998110445" target="_blank">Falar no WhatsApp</a>
-  </div>
-</body>
-</html>
--->
