@@ -1,3 +1,4 @@
+
 <!-- Página ajustada com destaques, depoimentos e botões finais -->
 <style>
   :root{
@@ -13,14 +14,14 @@
   section{padding:60px 20px}
 
   .hero{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;text-align:center;padding:80px 20px}
-  .hero h1{font-size:52px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{font-size:58px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:28px;font-weight:900}
   .btn{display:inline-block;border-radius:999px;padding:16px 30px;font-weight:800;text-decoration:none;cursor:pointer;transition:.18s;font-size:16px}
   .btn-yellow{background:var(--yellow-canary);color:#111;box-shadow:0 8px 22px rgba(0,0,0,.18)}
   .btn-yellow:hover{transform:translateY(-2px);filter:brightness(1.05)}
-  .btn-gold{background:var(--gold-500);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+  .btn-gold{background:var(--yellow-canary);color:#111;box-shadow:0 8px 22px rgba(0,0,0,.25)}
   .btn-gold:hover{transform:translateY(-2px);filter:brightness(1.05)}
 
-  h2.title, .title{font-size:34px;text-align:center;margin:0 0 24px;font-weight:900;color:#0b0b0b}
+  h2.title, .title{font-size:42px;text-align:center;margin:0 0 28px;font-weight:900;color:#0b0b0b}
 
   .objectives{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
   .objective{border-radius:16px;box-shadow:var(--shadow);padding:18px;text-align:center}
@@ -29,7 +30,7 @@
   .objective h4{margin-bottom:8px}
 
   .bio{max-width:860px;margin:0 auto;background:var(--green-900);color:#fff;border-radius:16px;box-shadow:var(--shadow);padding:28px;text-align:center}
-  .bio h3{font-size:28px;margin-bottom:10px}
+  .bio h3{font-size:30px;margin-bottom:10px}
 
   .depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
   .depo{background:#fff;border:1px solid var(--stone-200);border-radius:16px;box-shadow:var(--shadow);padding:26px;position:relative;font-size:18px}
@@ -88,7 +89,7 @@
 
 <section id="depoimentos">
   <div class="container">
-    <h3 class="title" style="color:var(--green-900)">Transformações Reais</h3>
+    <h3 class="title" style="color:var(--green-900);font-size:42px">Transformações Reais</h3>
     <div class="depos">
       <article class="depo"><p>“Participar da mentoria foi muito importante para mim. Tive resultados e despertares em várias áreas da minha vida — financeira, psicológica e principalmente emocional. Como é bom não ter medo de sentir! Hoje me sinto leve, tranquila e confiante, mais perto do meu sonho de cursar medicina.”</p><small>Participante da Mentoria</small></article>
       <article class="depo"><p>“Aprendi que o dinheiro não é apenas números, mas carrega emoções, histórias e vínculos. Quando olhado com equilíbrio, nos ensina sobre dar e receber e sobre honrar quem veio antes.”</p><small>Alini De Paris</small></article>
@@ -100,11 +101,11 @@
 
     <div class="final-buttons">
       <a class="btn btn-yellow" href="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/viewform" target="_blank">Já tomei minha decisão — Quero me inscrever agora</a>
-      <a class="btn btn-gold" href="https://wa.me/5549998110445" target="_blank">Ainda estou com dúvida — Preciso de mais informações</a>
+      <a class="btn btn-yellow" href="https://wa.me/5549998110445" target="_blank">Ainda estou com dúvida — Preciso de mais informações</a>
     </div>
   </div>
 </section>
 
 <section class="footer">
-  © 2025 Mentoria O SEU LUGAR • Todos os direitos reservados • </a>
+  © 2025 Mentoria O SEU LUGAR • Todos os direitos reservados •
 </section>
