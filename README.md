@@ -1,4 +1,4 @@
-<!-- Página ajustada com destaques e botão externo para formulário -->
+<!-- Página ajustada com título azul oculto -->
 <style>
   :root{
     --green-900:#0c4d1f;
@@ -10,6 +10,12 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;background:#eaf5ec}
+
+  /* Esconde o título azul padrão */
+  h1:first-of-type {
+    display: none !important;
+  }
+
   section{padding:60px 20px}
 
   .hero{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;text-align:center;padding:80px 20px}
