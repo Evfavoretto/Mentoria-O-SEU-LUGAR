@@ -17,6 +17,8 @@
   .btn{display:inline-block;border-radius:999px;padding:14px 26px;font-weight:800;text-decoration:none;cursor:pointer;transition:.18s}
   .btn-yellow{background:var(--yellow-canary);color:#111;box-shadow:0 8px 22px rgba(0,0,0,.18)}
   .btn-yellow:hover{transform:translateY(-1px);filter:brightness(1.03)}
+  .btn-gold{background:var(--gold-500);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+  .btn-gold:hover{transform:translateY(-1px);filter:brightness(1.05)}
 
   h2.title, .title{font-size:34px;text-align:center;margin:0 0 24px;font-weight:900;color:#0b0b0b}
 
@@ -92,6 +94,9 @@
       <article class="depo"><p>“Aprendi que as emoções podem parecer ruins se não sentidas, mas fazem parte do nosso aprendizado e nos fortalecem para uma nova história.”</p><small>Tonia Bohs</small></article>
       <article class="depo"><p>“Aprendi que a gente pode ressignificar as emoções, transformando elas em aprendizado e força.”</p><small>Mateus Battistela</small></article>
       <article class="depo"><p>“Aprendi que somos capazes de ressignificar cada emoção, aprender a nos tornar mais resilientes e equilibrados.”</p><small>Vania Alebrant</small></article>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/viewform" target="_blank">Já tomei minha decisão — Quero me inscrever agora</a>
     </div>
   </div>
 </section>
