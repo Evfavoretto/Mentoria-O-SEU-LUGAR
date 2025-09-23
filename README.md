@@ -1,176 +1,143 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentoria O SEU LUGAR</title>
-  <style>
-    :root{
-      --green-900:#0c4d1f;
-      --green-800:#0a3c16;
-      --gold-500:#c6a75d;
-      --yellow-200:#fff68f;
-      --stone-200:#e7e7e7;
-      --shadow:0 10px 28px rgba(0,0,0,.14);
-    }
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;background:#fff}
-    section{padding:60px 20px}
-    h1,h2,h3{margin:0 0 16px}
-    .hero{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;text-align:center;padding:80px 20px}
-    .hero h1{font-size:42px;text-transform:uppercase}
-    .btn{display:inline-block;border-radius:999px;padding:14px 26px;font-weight:700;text-decoration:none;cursor:pointer}
-    .btn-yellow{background:var(--yellow-200);color:#000}
-    .objectives{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-    .objective{border-radius:16px;box-shadow:var(--shadow);padding:18px;text-align:center}
-    .objective.green{background:var(--green-900);color:#fff}
-    .objective.white{background:#fff;border:1px solid var(--stone-200)}
-    .bio{max-width:800px;margin:0 auto;text-align:center}
-    .bio h3{font-size:28px;color:var(--green-900)}
-    .depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-    .depo{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:20px;position:relative}
-    .depo:before{content:'“';position:absolute;top:-12px;left:12px;font-size:48px;color:#cbb67a;opacity:.5}
-    .investment{background:var(--green-900);color:#fff;border-radius:18px;max-width:800px;margin:0 auto;padding:30px;text-align:center}
-    .bonus{background:var(--green-800);color:#fff;border-radius:14px;padding:16px;margin-top:16px}
-    details{background:var(--yellow-200);margin-bottom:10px;padding:14px;border-radius:10px}
-    details summary{cursor:pointer;font-weight:600}
-    form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:0 auto}
-    form .full{grid-column:1/-1}
-    form input,form textarea,form select{padding:12px;border-radius:12px;border:1px solid #ccc}
-    .footer{background:#06290f;color:#dfeee6;text-align:center;padding:20px;font-size:14px}
-  </style>
-</head>
-<body>
+<!-- Página ajustada com destaques nos objetivos e depoimentos -->
+<style>
+  :root{
+    --green-900:#0c4d1f; /* verde profundo da sua marca */
+    --green-800:#0a3c16; /* verde escuro para degradê/segundo plano */
+    --gold-500:#c6a75d; /* dourado da marca (detalhes) */
+    --yellow-canary:#fff176; /* amarelo canário dos CTAs/FAQ */
+    --stone-200:#e7e7e7;
+    --shadow:0 10px 28px rgba(0,0,0,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;background:#fff}
+  section{padding:60px 20px}
+
+  /* HERO com o degradê original verde e título em caixa alta */
+  .hero{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;text-align:center;padding:80px 20px}
+  .hero h1{font-size:46px;letter-spacing:.5px;text-transform:uppercase}
+  .btn{display:inline-block;border-radius:999px;padding:14px 26px;font-weight:800;text-decoration:none;cursor:pointer;transition:.18s}
+  .btn-yellow{background:var(--yellow-canary);color:#111;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+  .btn-yellow:hover{transform:translateY(-1px);filter:brightness(1.03)}
+
+  /* Títulos maiores conforme pedido */
+  h2.title, .title{font-size:34px;text-align:center;margin:0 0 24px;font-weight:900;color:#0b0b0b}
+
+  /* OBJETIVOS com cards verdes/brancos alternados (controle manual por classe) */
+  .objectives{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .objective{border-radius:16px;box-shadow:var(--shadow);padding:18px;text-align:center}
+  .objective.green{background:var(--green-900);color:#fff}
+  .objective.white{background:#fff;border:1px solid var(--stone-200);color:#0b0b0b}
+  .objective h4{margin-bottom:8px}
+
+  /* BLOCO BIO em verde com tipografia branca */
+  .bio{max-width:860px;margin:0 auto;background:var(--green-900);color:#fff;border-radius:16px;box-shadow:var(--shadow);padding:28px;text-align:center}
+  .bio h3{font-size:28px;margin-bottom:10px}
+
+  /* DEPOIMENTOS com tipografia maior e aspas douradas suaves */
+  .depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+  .depo{background:#fff;border:1px solid var(--stone-200);border-radius:16px;box-shadow:var(--shadow);padding:26px;position:relative;font-size:18px}
+  .depo:before{content:'\201C';position:absolute;top:-12px;left:16px;font-size:54px;color:#cbb67a;opacity:.5}
+  .depo p{margin:8px 0 12px;font-style:italic}
+  .depo small{display:block;color:#444;font-weight:600;text-align:right}
+
+  /* INVESTIMENTO & BÔNUS (verdes com texto branco) */
+  .investment{background:radial-gradient(1200px 400px at 10% -10%, #1a6a33, var(--green-900));color:#fff;border-radius:18px;max-width:880px;margin:0 auto;padding:32px;text-align:center;box-shadow:0 18px 38px rgba(0,0,0,.25)}
+  .bonus{background:radial-gradient(1200px 400px at 10% -10%, #145a2a, var(--green-800));color:#fff;border-radius:14px;padding:18px;margin-top:18px}
+
+  /* FAQ em amarelo canário com setinhas nativas */
+  details{background:var(--yellow-canary);margin:0 auto 10px;max-width:880px;padding:14px;border-radius:12px;box-shadow:var(--shadow)}
+  details summary{cursor:pointer;font-weight:800;color:#111}
+  details p{margin-top:10px}
+
+  /* FORM: inputs arredondados e grade 2 colunas */
+  form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:880px;margin:0 auto}
+  form .full{grid-column:1/-1}
+  form input,form textarea,form select{padding:12px;border-radius:12px;border:1px solid #ccc;font-size:16px}
+
+  .footer{background:#06290f;color:#dfeee6;text-align:center;padding:22px;font-size:14px}
+</style>
 
 <section class="hero">
-  <h1>Mentoria O SEU LUGAR</h1>
-  <p>Reconstrua sua vida com clareza, segurança e prosperidade emocional.</p>
-  <a class="btn btn-yellow" href="#formulario">Já decidi e quero fazer parte</a>
+  <h1>MENTORIA O SEU LUGAR</h1>
+  <p>Reconstrua sua vida com clareza e segurança. Libere padrões ocultos. Prospere com leveza.</p>
+  <a class="btn btn-primary" href="#aplicacao">Já decidi e quero fazer parte</a>
 </section>
 
 <section>
-  <h2 style="text-align:center">Objetivos da Mentoria</h2>
-  <div class="objectives">
-    <div class="objective green"><h4>Libertação</h4><p>Libertação de padrões familiares limitados.</p></div>
-    <div class="objective green"><h4>Relacionamentos</h4><p>Relacionamentos mais saudáveis e harmoniosos.</p></div>
-    <div class="objective green"><h4>Reconciliação</h4><p>Reconciliação com a história da sua família.</p></div>
-    <div class="objective white"><h4>Prosperidade</h4><p>Prosperidade e abundância financeira.</p></div>
-    <div class="objective white"><h4>Autoconfiança</h4><p>Autoconfiança e empoderamento pessoal.</p></div>
-    <div class="objective white"><h4>Equilíbrio</h4><p>Equilíbrio emocional e mental.</p></div>
-    <div class="objective green"><h4>Alívio</h4><p>Alívio de estresse, ansiedade e sintomas psicossomáticos.</p></div>
-    <div class="objective green"><h4>Família</h4><p>Restauração do papel dos pais e filhos.</p></div>
-    <div class="objective green"><h4>Liberação</h4><p>Liberação de cargas emocionais do passado.</p></div>
-    <div class="objective white"><h4>Segurança</h4><p>Segurança e clareza para mudanças e decisões.</p></div>
-  </div>
-</section>
-
-<section>
-  <div class="bio">
-    <h3>Conheça o seu mentor</h3>
-    <p><strong>Evandro Favoretto</strong> — Graduado em Gestão Financeira, pós-graduado em Neurociência, Psicologia e Saúde Mental. Formação em Constelação Familiar e Empresarial, formação em Numerologia, empresário, consultor e mentor de vida. Também possui formação em Meditação e Respiração Terapêutica com renascimento.</p>
-  </div>
-</section>
-
-<section>
-  <h2 style="text-align:center">Transformações Reais</h2>
-  <div class="depos">
-    <div class="depo"><p>“Participar da mentoria foi muito importante para mim. Tive resultados em várias áreas da vida — financeira, psicológica e emocional. Hoje me sinto leve, tranquila e confiante.”</p><small>Participante</small></div>
-    <div class="depo"><p>“Aprendi que o dinheiro carrega emoções, histórias e vínculos. Quando olhado com equilíbrio, nos ensina sobre dar e receber.”</p><small>Alini De Paris</small></div>
-    <div class="depo"><p>“Cada dia que nasce é uma oportunidade de evoluir e ter consciência de como se quer viver. Mentoria Top!”</p><small>Fernando Lovison</small></div>
-    <div class="depo"><p>“Aprendi que as emoções fazem parte do aprendizado e nos fortalecem para uma nova história.”</p><small>Tonia Bohs</small></div>
-  </div>
-</section>
-
-<section>
-  <div class="investment">
-    <h2>Investimento & Estrutura</h2>
-    <p><del>R$3.500</del> <strong>por apenas R$1.970</strong><br>
-    12 semanas — segundas-feiras, das 19h às 22h</p>
-    <div class="bonus">
-      <h3>🎁 Bônus Exclusivos</h3>
-      <ul style="text-align:left;max-width:500px;margin:0 auto">
-        <li>4 encontros individuais online</li>
-        <li>Materiais e tarefas de integração</li>
-        <li>Suporte no grupo durante a mentoria</li>
-      </ul>
+  <div class="container">
+    <h3 class="title">Objetivos da Mentoria</h3>
+    <div class="objectives">
+      <div class="objective green"><h4>Libertação</h4><p>Libertação de padrões familiares limitados.</p></div>
+      <div class="objective green"><h4>Relacionamentos</h4><p>Relacionamentos mais saudáveis e harmoniosos.</p></div>
+      <div class="objective green"><h4>Reconciliação</h4><p>Reconciliação com a história da sua família.</p></div>
+      <div class="objective white"><h4>Prosperidade</h4><p>Prosperidade e abundância financeira.</p></div>
+      <div class="objective white"><h4>Autoconfiança</h4><p>Autoconfiança e empoderamento pessoal.</p></div>
+      <div class="objective white"><h4>Equilíbrio</h4><p>Equilíbrio emocional e mental.</p></div>
+      <div class="objective green"><h4>Alívio</h4><p>Alívio de estresse, ansiedade e sintomas psicossomáticos.</p></div>
+      <div class="objective green"><h4>Família</h4><p>Restauração do papel dos pais e filhos.</p></div>
+      <div class="objective green"><h4>Liberação</h4><p>Liberação de cargas emocionais do passado.</p></div>
+      <div class="objective white"><h4>Segurança</h4><p>Segurança e clareza para mudanças e decisões.</p></div>
     </div>
   </div>
 </section>
 
 <section>
-  <h2 style="text-align:center">Perguntas Frequentes</h2>
-  <div style="max-width:800px;margin:0 auto">
-    <details>
-      <summary>Como funciona a mentoria?</summary>
-      <p>São 12 encontros semanais em grupo, via Zoom, além de 4 encontros individuais e suporte durante todo o processo.</p>
-    </details>
-    <details>
-      <summary>Preciso ter experiência anterior?</summary>
-      <p>Não. A mentoria foi desenhada para qualquer pessoa em busca de clareza, equilíbrio e prosperidade.</p>
-    </details>
-    <details>
-      <summary>Como é feito o pagamento?</summary>
-      <p>Você pode pagar à vista ou parcelado no cartão de crédito. Mais detalhes serão enviados após sua aplicação.</p>
-    </details>
+  <div class="container">
+    <div class="bio">
+      <h3>Conheça o seu mentor</h3>
+      <p><strong>Evandro Favoretto</strong> — Graduado em Gestão Financeira, pós-graduado em Neurociência, Psicologia e Saúde Mental. Formação em Constelação Familiar e Empresarial, formação em Numerologia, empresário, consultor e mentor de vida. Também possui formação em Meditação e Respiração Terapêutica com renascimento.</p>
+    </div>
   </div>
 </section>
 
-<section id="formulario">
-  <h2 style="text-align:center">Formulário de Aplicação</h2>
-  <iframe name="hidden_iframe" style="display:none;"></iframe>
-  <form id="appForm"
-    action="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/formResponse"
-    method="POST" target="hidden_iframe">
+<section id="depoimentos">
+  <div class="container">
+    <h3 class="title">Transformações Reais</h3>
+    <div class="depos">
+      <article class="depo"><p>“Participar da mentoria foi muito importante para mim. Tive resultados e despertares em várias áreas da minha vida — financeira, psicológica e principalmente emocional. Como é bom não ter medo de sentir! Hoje me sinto leve, tranquila e confiante, mais perto do meu sonho de cursar medicina.”</p><small>Participante da Mentoria</small></article>
+      <article class="depo"><p>“Aprendi que o dinheiro não é apenas números, mas carrega emoções, histórias e vínculos. Quando olhado com equilíbrio, nos ensina sobre dar e receber e sobre honrar quem veio antes.”</p><small>Alini De Paris</small></article>
+      <article class="depo"><p>“Cada dia que nasce é uma oportunidade de evoluir e ter consciência de como se quer viver, observando sentimentos e escolhendo o que terá mais importância. Mentoria Top!”</p><small>Fernando Lovison</small></article>
+      <article class="depo"><p>“Aprendi que as emoções podem parecer ruins se não sentidas, mas fazem parte do nosso aprendizado e nos fortalecem para uma nova história.”</p><small>Tonia Bohs</small></article>
+      <article class="depo"><p>“Aprendi que a gente pode ressignificar as emoções, transformando elas em aprendizado e força.”</p><small>Mateus Battistela</small></article>
+      <article class="depo"><p>“Aprendi que somos capazes de ressignificar cada emoção, aprender a nos tornar mais resilientes e equilibrados.”</p><small>Vania Alebrant</small></article>
+    </div>
+  </div>
+</section>
 
-    <input class="full" type="text" name="entry.1179648702" placeholder="Nome completo" required>
-    <input type="email" name="entry.1143030303" placeholder="E-mail" required>
-    <input type="tel" name="entry.2915256" placeholder="WhatsApp (DDD + número)" required>
-    <input type="text" name="entry.861399822" placeholder="Cidade/Estado">
-
-    <textarea class="full" name="entry.1280192492" placeholder="Qual seu objetivo principal?" required></textarea>
-    <textarea class="full" name="entry.667930364" placeholder="Quais desafios emocionais/sistêmicos você sente hoje?" required></textarea>
-
-    <select name="entry.1748955800" class="full">
-      <option>Relacionamentos</option>
-      <option>Emocional/saúde</option>
-      <option>Carreira/negócios</option>
-      <option>Finanças/prosperidade</option>
-      <option>Família/papéis sistêmicos</option>
-    </select>
-
-    <select name="entry.787425964" class="full">
-      <option>Tenho disponibilidade</option>
-      <option>Consigo ajustar</option>
-      <option>Não consigo nesse horário</option>
-    </select>
-
-    <select name="entry.1556807345" class="full">
-      <option>Instagram</option>
-      <option>WhatsApp/Indicação</option>
-      <option>YouTube</option>
-      <option>Evento/Aula</option>
-      <option>Outro</option>
-    </select>
-
-    <select name="entry.1363258938" class="full">
-      <option>Sim, estou ciente do valor</option>
-      <option>Tenho dúvidas sobre formas de pagamento</option>
-    </select>
-
-    <button type="submit" class="btn btn-yellow full">Enviar minha aplicação</button>
-  </form>
+<section id="aplicacao">
+  <div class="container">
+    <h3 class="title" style="color:#fff">Formulário de Aplicação — Mentoria O SEU LUGAR</h3>
+    <div class="form-wrap">
+      <form class="app" action="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+        <div class="field"><label for="nome">Nome completo</label><input id="nome" name="entry.1179648702" type="text" required></div>
+        <div class="field"><label for="email">E-mail</label><input id="email" name="entry.1143030303" type="email" required></div>
+        <div class="field"><label for="whats">WhatsApp (DDD + número)</label><input id="whats" name="entry.2915256" type="tel" required></div>
+        <div class="field"><label for="cidade">Cidade/Estado</label><input id="cidade" name="entry.861399822" type="text"></div>
+        <div class="field full"><label for="objetivo">Qual seu objetivo principal com a mentoria?</label><textarea id="objetivo" name="entry.1280192492" required></textarea></div>
+        <div class="field full"><label for="desafios">Quais desafios emocionais/sistêmicos você sente hoje?</label><textarea id="desafios" name="entry.667930364" required></textarea></div>
+        <div class="field"><label for="area">Área que mais deseja transformar</label><select id="area" name="entry.1748955800"><option>Relacionamentos</option><option>Emocional/saúde</option><option>Carreira/negócios</option><option>Finanças/prosperidade</option><option>Família/papéis sistêmicos</option></select></div>
+        <div class="field"><label for="dispon">Disponibilidade (segundas 19h–22h)</label><select id="dispon" name="entry.787425964"><option>Tenho disponibilidade</option><option>Consigo ajustar</option><option>Não consigo nesse horário</option></select></div>
+        <div class="field"><label for="origem">Como soube da mentoria?</label><select id="origem" name="entry.1556807345"><option>Instagram</option><option>WhatsApp/Indicação</option><option>YouTube</option><option>Evento/Aula</option><option>Outro</option></select></div>
+        <div class="field"><label for="invest">Está ciente do investimento?</label><select id="invest" name="entry.159333129"><option>Sim, estou ciente do valor</option><option>Tenho dúvidas sobre formas de pagamento</option></select></div>
+        <div class="field full consent"><input id="lgpd" type="checkbox" required><label for="lgpd">Autorizo o uso dos meus dados para análise da aplicação e contato (LGPD).</label></div>
+        <div class="field full"><button class="btn btn-primary" type="submit">Enviar minha aplicação</button></div>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+      </form>
+    </div>
+  </div>
 </section>
 
 <section class="footer">
-  © 2025 Mentoria O SEU LUGAR • Todos os direitos reservados
+  © 2025 Mentoria O SEU LUGAR • Dúvidas? WhatsApp: <a href="https://wa.me/5549998110445" target="_blank">(49) 99811-0445</a>
 </section>
 
 <script>
-  document.getElementById("appForm").addEventListener("submit", function() {
-    setTimeout(function() {
-      window.location.href = "/obrigado.html"; 
-    }, 1000);
-  });
+  // Envio silencioso para o Google Forms + redirecionamento para Obrigado
+  var submitted = false;
+  var iframe = document.getElementById('hidden_iframe');
+  if (iframe) {
+    iframe.addEventListener('load', function(){
+      if (submitted) { window.location.href = 'obrigado.html'; }
+    });
+  }
 </script>
-
-</body>
-</html>
