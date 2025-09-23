@@ -1,54 +1,66 @@
 <!-- Página ajustada com destaques nos objetivos e depoimentos -->
 <style>
-  :root{--green-900:#0c4d1f;--green-800:#0a3c16;--gold-500:#c6a75d;--yellow-300:#fff176;--stone-200:#e7e7e7;--white:#fff;--shadow:0 10px 28px rgba(0,0,0,.14);--radius:18px;--maxw:1120px}
+  :root{
+    --green-900:#0c4d1f; /* verde profundo da sua marca */
+    --green-800:#0a3c16; /* verde escuro para degradê/segundo plano */
+    --gold-500:#c6a75d; /* dourado da marca (detalhes) */
+    --yellow-canary:#fff176; /* amarelo canário dos CTAs/FAQ */
+    --stone-200:#e7e7e7;
+    --shadow:0 10px 28px rgba(0,0,0,.14);
+  }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;line-height:1.5;background:var(--white)}
-  .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;background:#fff}
+  section{padding:60px 20px}
 
-  .hero{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;text-align:center;padding:56px 20px 40px}
-  .hero h1{margin:14px 0 10px;font-size:42px;letter-spacing:1px}
-  .hero p{max-width:72ch;margin:0 auto 18px;color:#dff3e7}
-  .btn{display:inline-block;border:0;border-radius:999px;padding:14px 26px;font-weight:700;cursor:pointer;text-decoration:none;transition:.2s}
-  .btn-primary{background:var(--yellow-300);color:#181818;box-shadow:0 8px 22px rgba(198,167,93,.35)}
-  .btn-primary:hover{filter:brightness(1.05)}
+  /* HERO com o degradê original verde e título em caixa alta */
+  .hero{background:linear-gradient(180deg,var(--green-900),var(--green-800));color:#fff;text-align:center;padding:80px 20px}
+  .hero h1{font-size:46px;letter-spacing:.5px;text-transform:uppercase}
+  .btn{display:inline-block;border-radius:999px;padding:14px 26px;font-weight:800;text-decoration:none;cursor:pointer;transition:.18s}
+  .btn-yellow{background:var(--yellow-canary);color:#111;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+  .btn-yellow:hover{transform:translateY(-1px);filter:brightness(1.03)}
 
-  section{padding:56px 0}
-  .title{text-align:center;font-size:34px;margin-bottom:28px;font-weight:800}
+  /* Títulos maiores conforme pedido */
+  h2.title, .title{font-size:34px;text-align:center;margin:0 0 24px;font-weight:900;color:#0b0b0b}
 
+  /* OBJETIVOS com cards verdes/brancos alternados (controle manual por classe) */
   .objectives{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-  .objective{border-radius:16px;box-shadow:var(--shadow);padding:18px;text-align:center;font-size:18px;font-weight:600}
-  .objective.white{background:var(--white);border:1px solid var(--stone-200);color:var(--green-900)}
+  .objective{border-radius:16px;box-shadow:var(--shadow);padding:18px;text-align:center}
   .objective.green{background:var(--green-900);color:#fff}
+  .objective.white{background:#fff;border:1px solid var(--stone-200);color:#0b0b0b}
   .objective h4{margin-bottom:8px}
 
-  .bio{background:var(--green-900);color:#fff;border-radius:16px;box-shadow:var(--shadow);padding:26px;max-width:860px;margin:0 auto}
-  .bio h3{margin-bottom:12px;font-size:28px;color:#fff}
-  .bio p{margin-bottom:8px}
+  /* BLOCO BIO em verde com tipografia branca */
+  .bio{max-width:860px;margin:0 auto;background:var(--green-900);color:#fff;border-radius:16px;box-shadow:var(--shadow);padding:28px;text-align:center}
+  .bio h3{font-size:28px;margin-bottom:10px}
 
+  /* DEPOIMENTOS com tipografia maior e aspas douradas suaves */
   .depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-  .depo{background:var(--white);border:1px solid var(--stone-200);border-radius:16px;box-shadow:var(--shadow);padding:28px;position:relative;font-size:18px}
-  .depo:before{content:'\201C';position:absolute;top:-12px;left:16px;font-size:52px;color:#cbb67a;opacity:.5}
-  .depo p{margin:10px 0 12px;font-style:italic}
+  .depo{background:#fff;border:1px solid var(--stone-200);border-radius:16px;box-shadow:var(--shadow);padding:26px;position:relative;font-size:18px}
+  .depo:before{content:'C';position:absolute;top:-12px;left:16px;font-size:54px;color:#cbb67a;opacity:.5}
+  .depo p{margin:8px 0 12px;font-style:italic}
   .depo small{display:block;color:#444;font-weight:600;text-align:right}
 
-  #aplicacao{background:linear-gradient(180deg,#104c22,var(--green-900));color:#fff}
-  .form-wrap{background:#fff;color:#0b0b0b;border-radius:22px;box-shadow:var(--shadow);padding:28px}
-  form.app{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .field{display:flex;flex-direction:column;gap:6px}
-  .field label{font-weight:600;font-size:14px}
-  .field input,.field select,.field textarea{padding:12px 14px;border:1px solid #ccc;border-radius:12px;font-size:15px}
-  .field textarea{min-height:110px;resize:vertical}
-  .full{grid-column:1/-1}
-  .consent{display:flex;gap:10px;align-items:flex-start}
+  /* INVESTIMENTO & BÔNUS (verdes com texto branco) */
+  .investment{background:radial-gradient(1200px 400px at 10% -10%, #1a6a33, var(--green-900));color:#fff;border-radius:18px;max-width:880px;margin:0 auto;padding:32px;text-align:center;box-shadow:0 18px 38px rgba(0,0,0,.25)}
+  .bonus{background:radial-gradient(1200px 400px at 10% -10%, #145a2a, var(--green-800));color:#fff;border-radius:14px;padding:18px;margin-top:18px}
 
-  .footer{background:#06290f;color:#dfeee6;text-align:center;padding:26px 12px;font-size:14px}
-  .footer a{color:#dfeee6}
+  /* FAQ em amarelo canário com setinhas nativas */
+  details{background:var(--yellow-canary);margin:0 auto 10px;max-width:880px;padding:14px;border-radius:12px;box-shadow:var(--shadow)}
+  details summary{cursor:pointer;font-weight:800;color:#111}
+  details p{margin-top:10px}
+
+  /* FORM: inputs arredondados e grade 2 colunas */
+  form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:880px;margin:0 auto}
+  form .full{grid-column:1/-1}
+  form input,form textarea,form select{padding:12px;border-radius:12px;border:1px solid #ccc;font-size:16px}
+
+  .footer{background:#06290f;color:#dfeee6;text-align:center;padding:22px;font-size:14px}
 </style>
 
 <section class="hero">
   <h1>MENTORIA O SEU LUGAR</h1>
   <p>Reconstrua sua vida com clareza e segurança. Libere padrões ocultos. Prospere com leveza.</p>
-  <a class="btn btn-primary" href="#aplicacao">Já decidi e quero fazer parte</a>
+  <a class="btn btn-yellow" href="#aplicacao">Já decidi e quero fazer parte</a>
 </section>
 
 <section>
@@ -108,7 +120,37 @@
         <div class="field"><label for="origem">Como soube da mentoria?</label><select id="origem" name="entry.1556807345"><option>Instagram</option><option>WhatsApp/Indicação</option><option>YouTube</option><option>Evento/Aula</option><option>Outro</option></select></div>
         <div class="field"><label for="invest">Está ciente do investimento?</label><select id="invest" name="entry.159333129"><option>Sim, estou ciente do valor</option><option>Tenho dúvidas sobre formas de pagamento</option></select></div>
         <div class="field full consent"><input id="lgpd" type="checkbox" required><label for="lgpd">Autorizo o uso dos meus dados para análise da aplicação e contato (LGPD).</label></div>
-        <div class="field full"><button class="btn btn-primary" type="submit">Enviar minha aplicação</button></div>
+        <div class="field full"><button class="btn btn-yellow" type="submit">Enviar minha aplicação</button></div>
+        <!-- Campos ocultos necessários para o Google Forms -->
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fbzx" id="fbzx" value="">
+        <!-- Ocultos necessários / compatibilidade Google Forms -->
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fbzx" id="fbzx" value="">
+        
+        <!-- Perguntas obrigatórias fixas do seu Form (defaults) -->
+        <input type="hidden" name="entry.1363258938" value="Sim, estou pronto(a)">
+        <input type="hidden" name="entry.1159568625" value="Sim">
+        <input type="hidden" name="entry.1258011610" value="Sim, me comprometo">
+        <input type="hidden" name="entry.361069271" value="1.970,00">
+        <input type="hidden" name="entry.687114195" value="1">
+        <input type="hidden" name="entry.94360950" value="1">
+
+        <!-- Ocultos necessários / compatibilidade Google Forms -->
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fbzx" id="fbzx" value="">
+        
+        <!-- Perguntas obrigatórias fixas do seu Form (defaults) -->
+        <input type="hidden" name="entry.1363258938" value="Sim, estou pronto(a)">
+        <input type="hidden" name="entry.1159568625" value="Sim">
+        <input type="hidden" name="entry.1258011610" value="Sim, me comprometo">
+        <input type="hidden" name="entry.361069271" value="1.970,00">
+        <input type="hidden" name="entry.687114195" value="1">
+        <input type="hidden" name="entry.94360950" value="1">
+
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
       </form>
     </div>
@@ -122,10 +164,19 @@
 <script>
   // Envio silencioso para o Google Forms + redirecionamento para Obrigado
   var submitted = false;
+
+  // Gera fbzx dinâmico (boa prática)
+  (function(){
+    var i = document.getElementById('fbzx');
+    if (i) { i.value = String(Math.random()).slice(2) + Date.now(); }
+  })();
+
   var iframe = document.getElementById('hidden_iframe');
   if (iframe) {
     iframe.addEventListener('load', function(){
       if (submitted) { window.location.href = 'obrigado.html'; }
     });
+  }
+</script>
   }
 </script>
