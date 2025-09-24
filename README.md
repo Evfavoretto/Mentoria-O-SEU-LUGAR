@@ -1,5 +1,12 @@
 <!-- Página ajustada com destaques, depoimentos e botões finais -->
 <style>
+  .logo {
+  max-width: 420px;   /* controla o tamanho máximo */
+  width: 100%;        /* ajusta em telas menores */
+  margin: 0 auto 30px;
+  display: block;     /* centraliza */
+}
+
   :root{
     --green-900:#0c4d1f;
     --green-800:#0a3c16;
@@ -72,7 +79,7 @@
 </style>
 
 <section class="hero">
-  <h1>MENTORIA O SEU LUGAR</h1>
+  <img src="logo-mentoria.png.jpeg" alt="Mentoria O SEU LUGAR" class="logo">
   <ul class="benefits">
     <li>🔹 Reconstrua sua vida com clareza e segurança.</li>
     <li>🔹 Libere padrões ocultos e transforme desafios em crescimento.</li>
