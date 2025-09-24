@@ -6,37 +6,32 @@
   <title>Mentoria O SEU LUGAR</title>
   <style>
     header, .page-header, .site-header, .project-name, .project-tagline {
-  display: none !important;
-}
-    .logo {
-      max-width: 420px;   /* controla o tamanho máximo */
-      width: 100%;        /* ajusta em telas menores */
-      margin: 0 auto 40px;
-      display: block;     /* centraliza */
+      display: none !important;
     }
 
     :root{
       --green-900:#0c4d1f;
       --green-800:#0a3c16;
-      --green-soft:#e6f3ea;        /* verde suave da seção Investimento */
+      --green-soft:#e6f3ea;
       --gold-500:#c6a75d;
       --yellow-canary:#ffeb3b;
       --stone-200:#e7e7e7;
       --shadow:0 10px 28px rgba(0,0,0,.14);
     }
+
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b0b0b;background:#eaf5ec}
     .container{max-width:1120px;margin:0 auto;padding:0 20px}
     section{padding:60px 20px}
-
-    /* Oculta o título azul padrão do GitHub Pages/Jekyll */
-    .page-header, .site-header, .project-name, .project-tagline {display:none !important}
 
     /* HERO no topo */
     .hero{
       background:linear-gradient(180deg,var(--green-900),var(--green-800));
       color:#fff;text-align:center;padding:120px 20px 80px;margin-top:0
     }
+    .hero h1{font-size:64px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:28px;font-weight:900}
+    @media (min-width:992px){.hero h1{font-size:72px}}
+    @media (max-width:480px){.hero h1{font-size:40px}}
     .hero ul.benefits{list-style:none;max-width:880px;margin:10px auto 6px;padding:0;text-align:left}
     .hero ul.benefits li{margin:6px 0}
     .hero .hero-kicker{max-width:880px;margin:10px auto 0;color:#e8f7ef;font-weight:600;text-align:center}
@@ -86,7 +81,7 @@
 <body>
 
 <section class="hero">
-  <img src="logo-mentoria.png.jpeg" alt="Mentoria O SEU LUGAR" class="logo">
+  <h1>MENTORIA O SEU LUGAR</h1>
   <ul class="benefits">
     <li>🔹 Reconstrua sua vida com clareza e segurança.</li>
     <li>🔹 Libere padrões ocultos e transforme desafios em crescimento.</li>
@@ -146,20 +141,12 @@
 </section>
 
 <!-- Investimento -->
-<section id="investimento" style="background:#fff;padding:60px 20px;text-align:center">
-  <h2 style="font-size:42px;color:#c6a75d;margin-bottom:30px;font-weight:900;">Investimento</h2>
-  <p style="font-size:24px;color:#111;margin-bottom:14px;">
-    <span style="text-decoration:line-through;color:#444;">Tabela: R$ 3.500,00</span>
-  </p>
-  <p style="font-size:32px;color:#c6a75d;font-weight:900;margin-bottom:26px;">
-    POR: R$ 1.970,00
-  </p>
-  <p style="font-size:22px;color:#0c4d1f;margin-bottom:12px;">
-    <strong>12 semanas</strong> (toda segunda-feira) — <strong>19h às 22h</strong>
-  </p>
-  <p style="font-size:22px;color:#b90000;font-weight:700;">
-    BÔNUS: 4 ENCONTROS individuais on-line
-  </p>
+<section id="investimento">
+  <h2>Investimento</h2>
+  <p class="tabela"><span>Tabela: R$ 3.500,00</span></p>
+  <p class="promo">POR: R$ 1.970,00</p>
+  <p class="carga"><strong>12 semanas</strong> (toda segunda-feira) — <strong>19h às 22h</strong></p>
+  <p class="bonus">BÔNUS: 4 ENCONTROS individuais on-line</p>
   <div style="margin-top:40px;">
     <a class="btn btn-yellow" href="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/viewform" target="_blank">
       Quero garantir minha vaga
