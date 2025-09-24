@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mentoria O SEU LUGAR</title>
   <style>
+    header, .page-header, .site-header, .project-name, .project-tagline {
+  display: none !important;
+}
     .logo {
       max-width: 420px;   /* controla o tamanho máximo */
       width: 100%;        /* ajusta em telas menores */
