@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -30,23 +29,23 @@
       color:#fff;text-align:center;padding:120px 20px 80px;margin-top:0
     }
     .hero h1 {
-      font-size: 80px;
+      font-size: 68px;       /* diminuído de 80px */
       letter-spacing: .5px;
       text-transform: uppercase;
-      margin-bottom: 50px;   /* espaço maior antes da lista */
+      margin-bottom: 40px;   /* espaço antes da lista */
       font-weight: 900;
     }
     @media (min-width:992px){
-      .hero h1{font-size: 96px;}
+      .hero h1{font-size: 80px;}  /* em telas grandes */
     }
     @media (max-width:480px){
-      .hero h1{font-size: 44px;}
+      .hero h1{font-size: 36px;}  /* no celular */
     }
     .hero ul.benefits{list-style:none;max-width:880px;margin:10px auto 6px;padding:0;text-align:left}
     .hero ul.benefits li{margin:6px 0}
     .hero .hero-kicker{
       max-width:880px;
-      margin:30px auto 30px; /* espaço antes e depois do texto */
+      margin:30px auto 30px;
       color:#e8f7ef;
       font-weight:600;
       text-align:center
