@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -28,16 +29,28 @@
       background:linear-gradient(180deg,var(--green-900),var(--green-800));
       color:#fff;text-align:center;padding:120px 20px 80px;margin-top:0
     }
+    .hero h1 {
+      font-size: 80px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-bottom: 50px;   /* espaço maior antes da lista */
+      font-weight: 900;
+    }
+    @media (min-width:992px){
+      .hero h1{font-size: 96px;}
+    }
+    @media (max-width:480px){
+      .hero h1{font-size: 44px;}
+    }
     .hero ul.benefits{list-style:none;max-width:880px;margin:10px auto 6px;padding:0;text-align:left}
     .hero ul.benefits li{margin:6px 0}
     .hero .hero-kicker{
       max-width:880px;
-      margin:20px auto 30px; /* espaço extra embaixo da frase */
+      margin:30px auto 30px; /* espaço antes e depois do texto */
       color:#e8f7ef;
       font-weight:600;
       text-align:center
     }
-    .hero .btn{margin-top:20px} /* espaço antes do botão */
 
     /* Botões */
     .btn{display:inline-block;border-radius:999px;padding:16px 30px;font-weight:800;text-decoration:none;cursor:pointer;transition:.18s;font-size:16px}
@@ -94,7 +107,9 @@
     <li>🔹 Descubra seu verdadeiro lugar no mundo e viva com mais leveza e realização.</li>
   </ul>
   <p class="hero-kicker">Seu caminho para uma vida mais plena e alinhada com sua essência começa aqui!</p>
-  <a class="btn btn-yellow" href="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/viewform" target="_blank">Quero fazer parte</a>
+  <div style="margin-top:30px;">
+    <a class="btn btn-yellow" href="https://docs.google.com/forms/d/e/1FAIpQLScOxe1PnumYWjnWFqyRKV2Bh2d58vuKwlacx8ZjvSODdvEQVw/viewform" target="_blank">Quero fazer parte</a>
+  </div>
 </section>
 
 <section>
