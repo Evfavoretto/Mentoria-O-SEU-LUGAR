@@ -332,7 +332,7 @@
 
 <!-- RODAPÉ -->
 <section class="footer">
-  © 2025 Mentoria O SEU LUGAR • Todos os direitos reservados • Dúvidas? <a href="https://wa.me/5549998110445" target="_blank">WhatsApp</a>
+  © 2025 Mentoria O SEU LUGAR • Todos os direitos reservados • 
 </section>
 
 <script>
