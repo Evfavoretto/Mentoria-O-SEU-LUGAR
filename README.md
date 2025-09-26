@@ -275,7 +275,7 @@
       <div class="faq-item">
         <button class="faq-q" role="tab" aria-expanded="false"><span>Há suporte entre os encontros?</span></button>
         <div class="faq-a" role="region">
-          Sim. Você contará com orientação no grupo da mentoria durante o período do programa, além das tarefas de integração para consolidar o aprendizado.
+          Sim. Sempre que precisar você contará com suporte especial pelo meu WhatsApp particular e também pelo grupo da Mentoria durante o período da Mentoria, além das tarefas de integração para consolidar o aprendizado.
         </div>
       </div>
     </div>
