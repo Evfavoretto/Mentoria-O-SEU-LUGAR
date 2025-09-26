@@ -80,23 +80,60 @@
 
     .final-buttons{margin-top:40px;text-align:center;display:flex;flex-direction:column;gap:16px;align-items:center}
 
-    /* FAQ (Perguntas Frequentes) */
-    #faq{background:#fff}
-    #faq .title{color:var(--green-900)}
-    .faq{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-    .faq-item{border:1px solid var(--yellow-canary);border-radius:14px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+    /* FAQ (Perguntas Frequentes) — FUNDO VERDE + ITENS BRANCOS */
+    #faq{
+      background:linear-gradient(180deg,var(--green-900),var(--green-800));
+      color:#fff;
+      padding-top:60px;
+      padding-bottom:60px;
+    }
+    #faq .title{
+      color:#fff;            /* título em branco sobre o fundo verde */
+    }
+    .faq{
+      max-width:900px;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      gap:12px
+    }
+    .faq-item{
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:14px;
+      background:#fff;       /* caixinhas brancas */
+      box-shadow:var(--shadow);
+      overflow:hidden
+    }
     .faq-q{
-      width:100%;text-align:left;background:#fff;padding:16px 18px 16px 18px;
-      font-weight:800;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:space-between
+      width:100%;
+      text-align:left;
+      background:#fff;       /* cabeçalho branco */
+      padding:16px 18px 16px 18px;
+      font-weight:800;
+      font-size:18px;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      color:#0b0b0b;         /* texto escuro para contraste */
     }
     .faq-q:hover{background:#fffde7}
-    .faq-q span{flex:1;color:#0b0b0b}
+    .faq-q span{flex:1}
     .faq-q::after{
-      content:'▸';font-size:18px;transition:.18s;margin-left:14px;color:#111
+      content:'▸';
+      font-size:18px;
+      transition:.18s;
+      margin-left:14px;
+      color:#111
     }
     .faq-item.active .faq-q::after{transform:rotate(90deg)}
     .faq-a{
-      display:none;padding:0 18px 18px 18px;color:#2c2c2c;font-size:16px;line-height:1.6
+      display:none;
+      padding:0 18px 18px 18px;
+      color:#2c2c2c;
+      font-size:16px;
+      line-height:1.6;
+      background:#fff;       /* resposta também branca */
     }
     .faq-item.active .faq-a{display:block}
 
@@ -186,7 +223,7 @@
       <div class="faq-item active">
         <button class="faq-q" role="tab" aria-expanded="true"><span>Para quem é a Mentoria O SEU LUGAR?</span></button>
         <div class="faq-a" role="region">
-          A mentoria é para quem quer ter uma vida mais leve e feliz.É para você que sente que carrega pesos emocionais/sistêmicos que impactam relacionamentos, decisões e prosperidade. Para você que sente que carrega o mundo nas costas, para quem sente dores e não aparece em exame algum. Ideal para quem busca leveza, clareza e um caminho prático de mudança com base em constelação familiar/empresarial, Psicologia, Neurociência, Psicanálise, Saúde Mental  e integração emocional.
+          A mentoria é para quem quer ter uma vida mais leve e feliz. É para você que sente que carrega pesos emocionais/sistêmicos que impactam relacionamentos, decisões e prosperidade. Para você que sente que carrega o mundo nas costas, para quem sente dores e não aparece em exame algum. Ideal para quem busca leveza, clareza e um caminho prático de mudança com base em constelação familiar/empresarial, Psicologia, Neurociência, Psicanálise, Saúde Mental e integração emocional.
         </div>
       </div>
 
@@ -214,7 +251,7 @@
       <div class="faq-item">
         <button class="faq-q" role="tab" aria-expanded="false"><span>E se eu tiver dúvidas antes de aplicar?</span></button>
         <div class="faq-a" role="region">
-          Sem problema. Use o botão <strong>“Preciso de mais informações”</strong> para falar comigo no WhatsApp: <a href="https://wa.me/5549998110445" target="_blank">(49) 99811-0445</a>.
+          Sem problema. Use o botão <strong>“Preciso de mais informações”</strong> para falar comigo no WhatsApp: <a href="https://wa.me/5549998110445" target="_blank" style="color:#0c4d1f;font-weight:700;">(49) 99811-0445</a>.
         </div>
       </div>
 
