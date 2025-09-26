@@ -1,5 +1,3 @@
-
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -17,6 +15,7 @@
       --gold-500:#c6a75d;
       --yellow-canary:#ffeb3b;
       --stone-200:#e7e7e7;
+      --red-700:#c62828;             /* vermelho para destaques do investimento */
       --shadow:0 10px 28px rgba(0,0,0,.14);
     }
     *{box-sizing:border-box;margin:0;padding:0}
@@ -80,7 +79,7 @@
 
     .final-buttons{margin-top:40px;text-align:center;display:flex;flex-direction:column;gap:16px;align-items:center}
 
-    /* FAQ (Perguntas Frequentes) — FUNDO VERDE + ITENS BRANCOS */
+    /* FAQ (Perguntas Frequentes) — fundo verde + itens brancos; perguntas em verde forte */
     #faq{
       background:linear-gradient(180deg,var(--green-900),var(--green-800));
       color:#fff;
@@ -88,7 +87,7 @@
       padding-bottom:60px;
     }
     #faq .title{
-      color:#fff;            /* título em branco sobre o fundo verde */
+      color:#fff;
     }
     .faq{
       max-width:900px;
@@ -100,25 +99,25 @@
     .faq-item{
       border:1px solid rgba(255,255,255,.15);
       border-radius:14px;
-      background:#fff;       /* caixinhas brancas */
+      background:#fff;
       box-shadow:var(--shadow);
       overflow:hidden
     }
     .faq-q{
       width:100%;
       text-align:left;
-      background:#fff;       /* cabeçalho branco */
+      background:#fff;
       padding:16px 18px 16px 18px;
-      font-weight:800;
+      font-weight:900;               /* mais forte */
       font-size:18px;
       cursor:pointer;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      color:#0b0b0b;         /* texto escuro para contraste */
+      color:var(--green-900);        /* perguntas em verde forte */
     }
     .faq-q:hover{background:#fffde7}
-    .faq-q span{flex:1}
+    .faq-q span{flex:1;color:var(--green-900)}  /* garante verde no texto */
     .faq-q::after{
       content:'▸';
       font-size:18px;
@@ -133,16 +132,34 @@
       color:#2c2c2c;
       font-size:16px;
       line-height:1.6;
-      background:#fff;       /* resposta também branca */
+      background:#fff;
     }
     .faq-item.active .faq-a{display:block}
 
-    /* Investimento */
+    /* Investimento — destaque em vermelho e verde conforme pedido */
     #investimento{background:var(--green-soft);text-align:center}
-    #investimento h2{font-size:42px;color:var(--gold-500);margin-bottom:30px;font-weight:900}
-    #investimento .tabela{font-size:24px;color:#111;margin-bottom:14px}
-    #investimento .tabela span{text-decoration:line-through;color:#444}
-    #investimento .promo{font-size:32px;color:var(--gold-500);font-weight:900;margin-bottom:26px}
+    #investimento h2{
+      font-size:42px;
+      color:var(--red-700);          /* título em vermelho */
+      margin-bottom:30px;
+      font-weight:900
+    }
+    #investimento .tabela{
+      font-size:28px;                /* maior */
+      color:#111;
+      margin-bottom:14px
+    }
+    #investimento .tabela span{
+      text-decoration:line-through;
+      color:var(--green-900);        /* valor de tabela em verde */
+      font-weight:900
+    }
+    #investimento .promo{
+      font-size:36px;                /* maior */
+      color:var(--red-700);          /* valor POR em vermelho */
+      font-weight:900;
+      margin-bottom:26px
+    }
     #investimento .carga{font-size:22px;color:var(--green-900);margin-bottom:12px}
     #investimento .bonus{font-size:22px;color:#b90000;font-weight:700}
 
@@ -266,18 +283,18 @@
 </section>
 
 <!-- Investimento -->
-<section id="investimento" style="background:#fff;padding:60px 20px;text-align:center">
-  <h2 style="font-size:42px;color:#c6a75d;margin-bottom:30px;font-weight:900;">Investimento</h2>
-  <p style="font-size:24px;color:#111;margin-bottom:14px;">
-    <span style="text-decoration:line-through;color:#444;">Tabela: R$ 3.500,00</span>
+<section id="investimento">
+  <h2>Investimento</h2>
+  <p class="tabela">
+    <span>Tabela: R$ 3.500,00</span>
   </p>
-  <p style="font-size:32px;color:#c6a75d;font-weight:900;margin-bottom:26px;">
+  <p class="promo">
     POR: R$ 1.970,00
   </p>
-  <p style="font-size:22px;color:#0c4d1f;margin-bottom:12px;">
+  <p class="carga">
     <strong>12 semanas</strong> (toda segunda-feira) — <strong>19h às 22h</strong>
   </p>
-  <p style="font-size:22px;color:#b90000;font-weight:700;">
+  <p class="bonus">
     BÔNUS: 4 ENCONTROS individuais on-line
   </p>
   <div style="margin-top:40px;">
