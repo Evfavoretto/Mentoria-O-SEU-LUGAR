@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -29,17 +30,17 @@
       color:#fff;text-align:center;padding:120px 20px 80px;margin-top:0
     }
     .hero h1 {
-      font-size: 68px;       /* diminuído de 80px */
+      font-size: 68px;       /* ajustado */
       letter-spacing: .5px;
       text-transform: uppercase;
       margin-bottom: 40px;   /* espaço antes da lista */
       font-weight: 900;
     }
     @media (min-width:992px){
-      .hero h1{font-size: 80px;}  /* em telas grandes */
+      .hero h1{font-size: 80px;}
     }
     @media (max-width:480px){
-      .hero h1{font-size: 36px;}  /* no celular */
+      .hero h1{font-size: 36px;}
     }
     .hero ul.benefits{list-style:none;max-width:880px;margin:10px auto 6px;padding:0;text-align:left}
     .hero ul.benefits li{margin:6px 0}
@@ -78,6 +79,26 @@
     .depo small{display:block;color:#444;font-weight:600;text-align:right}
 
     .final-buttons{margin-top:40px;text-align:center;display:flex;flex-direction:column;gap:16px;align-items:center}
+
+    /* FAQ (Perguntas Frequentes) */
+    #faq{background:#fff}
+    #faq .title{color:var(--green-900)}
+    .faq{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+    .faq-item{border:1px solid var(--yellow-canary);border-radius:14px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+    .faq-q{
+      width:100%;text-align:left;background:#fff;padding:16px 18px 16px 18px;
+      font-weight:800;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:space-between
+    }
+    .faq-q:hover{background:#fffde7}
+    .faq-q span{flex:1;color:#0b0b0b}
+    .faq-q::after{
+      content:'▸';font-size:18px;transition:.18s;margin-left:14px;color:#111
+    }
+    .faq-item.active .faq-q::after{transform:rotate(90deg)}
+    .faq-a{
+      display:none;padding:0 18px 18px 18px;color:#2c2c2c;font-size:16px;line-height:1.6
+    }
+    .faq-item.active .faq-a{display:block}
 
     /* Investimento */
     #investimento{background:var(--green-soft);text-align:center}
@@ -157,6 +178,56 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <h3 class="title">Perguntas Frequentes</h3>
+    <div class="faq" role="tablist" aria-label="Perguntas Frequentes">
+      <div class="faq-item active">
+        <button class="faq-q" role="tab" aria-expanded="true"><span>Para quem é a Mentoria O SEU LUGAR?</span></button>
+        <div class="faq-a" role="region">
+          A mentoria é para quem sente que carrega pesos emocionais/sistêmicos que impactam relacionamentos, decisões e prosperidade. Ideal para quem busca leveza, clareza e um caminho prático de mudança com base em constelação familiar/empresarial e integração emocional.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" role="tab" aria-expanded="false"><span>Como funciona na prática?</span></button>
+        <div class="faq-a" role="region">
+          São <strong>12 semanas</strong>, encontros em grupo às <strong>segundas, 19h–22h</strong>, com tarefas de integração entre encontros. Você terá também <strong>4 encontros individuais on-line (bônus)</strong> para aprofundar temas específicos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" role="tab" aria-expanded="false"><span>Qual é o investimento?</span></button>
+        <div class="faq-a" role="region">
+          De <s>R$ 3.500,00</s> por <strong>R$ 1.970,00</strong>. Condições e formas de pagamento são alinhadas após a aplicação aprovada.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" role="tab" aria-expanded="false"><span>Como faço minha inscrição?</span></button>
+        <div class="faq-a" role="region">
+          Clique em <strong>“Quero me inscrever agora”</strong>. Você será direcionado ao <strong>Formulário de Aplicação</strong> no Google Forms. Após enviar, entraremos em contato pelo WhatsApp para os próximos passos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" role="tab" aria-expanded="false"><span>E se eu tiver dúvidas antes de aplicar?</span></button>
+        <div class="faq-a" role="region">
+          Sem problema. Use o botão <strong>“Preciso de mais informações”</strong> para falar comigo no WhatsApp: <a href="https://wa.me/5549998110445" target="_blank">(49) 99811-0445</a>.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" role="tab" aria-expanded="false"><span>Há suporte entre os encontros?</span></button>
+        <div class="faq-a" role="region">
+          Sim. Você contará com orientação no grupo da mentoria durante o período do programa, além das tarefas de integração para consolidar o aprendizado.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Investimento -->
 <section id="investimento" style="background:#fff;padding:60px 20px;text-align:center">
   <h2 style="font-size:42px;color:#c6a75d;margin-bottom:30px;font-weight:900;">Investimento</h2>
@@ -182,6 +253,28 @@
 <section class="footer">
   © 2025 Mentoria O SEU LUGAR • Todos os direitos reservados •
 </section>
+
+<script>
+  // FAQ: abre uma pergunta por vez
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      const item = btn.parentElement;
+      const list = item.parentElement.querySelectorAll('.faq-item');
+
+      // fecha todas
+      list.forEach(i => {
+        if(i !== item){ 
+          i.classList.remove('active');
+          i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        }
+      });
+
+      // alterna a clicada
+      const isActive = item.classList.toggle('active');
+      btn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    });
+  });
+</script>
 
 </body>
 </html>
