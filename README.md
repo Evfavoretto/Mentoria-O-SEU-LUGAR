@@ -163,7 +163,7 @@
   <div class="container">
     <h3 class="title" style="color:var(--green-900)">Transformações Reais</h3>
     <div class="depos">
-      <article class="depo"><p>“Participar da mentoria foi muito importante para mim. Tive resultados e despertares em várias áreas da minha vida — financeira, psicológica e principalmente emocional. Como é bom não ter medo de sentir! Hoje me sinto leve, tranquila e confiante, mais perto do meu sonho de cursar medicina.”</p><small>Participante da Mentoria</small></article>
+      <article class="depo"><p>“Participar da mentoria foi muito importante para mim. Tive resultados e despertares em várias áreas da minha vida — financeira, psicológica e principalmente emocional. Como é bom não ter medo de sentir! Hoje me sinto leve, tranquila e confiante, mais perto do meu sonho de cursar medicina.”</p><small>Diego</small></article>
       <article class="depo"><p>“Aprendi que o dinheiro não é apenas números, mas carrega emoções, histórias e vínculos. Quando olhado com equilíbrio, nos ensina sobre dar e receber e sobre honrar quem veio antes.”</p><small>Alini De Paris</small></article>
       <article class="depo"><p>“Cada dia que nasce é uma oportunidade de evoluir e ter consciência de como se quer viver, observando sentimentos e escolhendo o que terá mais importância. Mentoria Top!”</p><small>Fernando Lovison</small></article>
       <article class="depo"><p>“Aprendi que as emoções podem parecer ruins se não sentidas, mas fazem parte do nosso aprendizado e nos fortalecem para uma nova história.”</p><small>Tonia Bohs</small></article>
@@ -186,7 +186,7 @@
       <div class="faq-item active">
         <button class="faq-q" role="tab" aria-expanded="true"><span>Para quem é a Mentoria O SEU LUGAR?</span></button>
         <div class="faq-a" role="region">
-          A mentoria é para quem sente que carrega pesos emocionais/sistêmicos que impactam relacionamentos, decisões e prosperidade. Ideal para quem busca leveza, clareza e um caminho prático de mudança com base em constelação familiar/empresarial e integração emocional.
+          A mentoria é para quem quer ter uma vida mais leve e feliz.É para você que sente que carrega pesos emocionais/sistêmicos que impactam relacionamentos, decisões e prosperidade. Para você que sente que carrega o mundo nas costas, para quem sente dores e não aparece em exame algum. Ideal para quem busca leveza, clareza e um caminho prático de mudança com base em constelação familiar/empresarial, Psicologia, Neurociência, Psicanálise, Saúde Mental  e integração emocional.
         </div>
       </div>
 
